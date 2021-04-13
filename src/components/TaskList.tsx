@@ -1,9 +1,8 @@
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 
 import '../styles/tasklist.scss'
 
 import { FiTrash, FiCheckSquare } from 'react-icons/fi'
-import { render } from 'react-dom';
 
 interface Task {
   id: number;
@@ -19,7 +18,7 @@ export function TaskList() {
     // Crie uma nova task com um id random, não permita criar caso o título seja vazio.
 
     if (newTaskTitle === '') {
-      return
+      return alert('Favor adicionar um título')
     }
 
     const newTask = {
