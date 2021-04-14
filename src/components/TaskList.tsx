@@ -21,6 +21,8 @@ export function TaskList() {
       return //alert('Favor adicionar um título')
     }
 
+    // if(!newTaskTitle) - outra forma de não permitir criar se for vazio
+
     const newTask = {
       id: Math.random(), //retornar ids aleatórios
       title: newTaskTitle,
@@ -31,6 +33,7 @@ export function TaskList() {
     newList.push(newTask)
 
     setTasks(newList)
+    // setTasks(oldState => [...oldState, newTask])
     setNewTaskTitle('')
   }
 
